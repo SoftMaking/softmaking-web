@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/* @import url('https://fonts.googleapis.com/css?family=Merriweather'); */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 
 body {
     font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, .card-title {
+    /* font-family: 'Merriweather', serif; */
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
 }
 
 .gradient {
@@ -27,7 +35,8 @@ body {
 }
 
 .portfolio-navbar.fixed-top + .page {
-    padding-top: 5.5rem;
+    /* padding-top: 5.5rem; */
+    padding-top: 4.5rem;
 }
 
 .portfolio-block {
@@ -37,6 +46,7 @@ body {
 
 .portfolio-block.block-intro {
     text-align: center;
+    height: 80vh;
 }
 
 .portfolio-block.block-intro .avatar {
@@ -52,6 +62,13 @@ body {
 .portfolio-block.block-intro .about-company {
     max-width: 800px;
     margin: 0 auto;
+}
+
+.overlay-intro { 
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../assets/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .portfolio-block.activities .heading{
@@ -116,6 +133,41 @@ body {
     margin: 1.75rem 0 .875rem;
 }
 
+.card-profile {
+    margin-top: 30px;
+    text-align: center;
+    min-width: 200px;
+}
+
+.card-plain {
+    background: transparent;
+    box-shadow: none;
+}
+
+.card-title {
+   line-height: 1.5em;
+   margin-bottom: .75rem;
+}
+
+.card .card-category {
+    margin-top: 10px;
+}
+
+.card-description, .description{
+    color: #999;
+}
+
+.card-profile .card-avatar, .card-testimonial .card-avatar {
+    max-width: 130px;
+    max-height: 130px;
+    margin: -50px auto 0;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: 0 16px 38px -12px rgba(0,0,0,.56), 0 4px 25px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+}
+
+
 input[type=text]:focus, input[type=email]:focus {
     border: none;
     border-radius: 0;
@@ -129,7 +181,39 @@ input[type=text], input[type=email] {
     border-bottom: 1px solid #CFD8DC;
 }
 
-@media (min-width:768px) {
+@media only screen and (max-width:768px) { 
+    .portfolio-block.team .row {
+        padding: 1rem;
+    }
+
+    .portfolio-block.team .card {
+        box-shadow: none !important;
+    }
+
+    .portfolio-block.team .card-footer {
+        background: #ffff;
+        border: transparent;
+    }
+
+    .portfolio-block.team .team-card {
+        margin-bottom: 5rem;
+    }
+
+    .portfolio-block.team .card-body{
+        padding-bottom: 0;
+    }
+
+    .portfolio-block.team .card-footer{
+        padding: 0;
+    }
+
+    .portfolio-block.team {
+        padding-bottom: 20px;
+    }
+}
+
+
+@media only screen and (min-width:768px) {
     .portfolio-block {
         padding-bottom: 100px;
         padding-top: 100px;
@@ -143,10 +227,18 @@ input[type=text], input[type=email] {
         width: 320px;
         height: 210px;
     }
-    
+
+    .portfolio-block.team .padding {
+        padding: 0rem;
+    }
+
+    .portfolio-block.team .team-card:nth-child(1) {
+        margin-left: 4% !important;
+    }
 }
 
-@media (min-width:992px) {
+
+@media only screen and (min-width:992px) {
     .portfolio-image {
         margin-top: 0;
     }
