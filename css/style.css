@@ -2,6 +2,10 @@
 /* @import url('https://fonts.googleapis.com/css?family=Merriweather'); */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -10,6 +14,61 @@ h1, h2, h3, h4, h5, .card-title {
     /* font-family: 'Merriweather', serif; */
     font-family: 'Roboto Slab', serif;
     font-weight: 700;
+}
+
+.divider-line {
+    margin: 25px 0;
+    height: 1px;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 75%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 75%, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(75%, rgba(0, 0, 0, 0)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 75%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 75%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 75%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 75%);
+}
+
+/* .img-largegear {
+    -webkit-animation: rotation 6s infinite linear;
+    z-index: -1;
+    width: 45%;
+    right: 65px;
+    top: 30px;
+}
+
+.img-tinygear {
+    -webkit-animation: rotation 4s infinite linear;
+    z-index: -1;
+    width: 25%;
+    left: 80px;
+    top: 110px;
+}
+
+.img-lines {
+    z-index: -2;
+} */
+
+.img-intro {
+    /* width: 80%; */
+}
+
+.img-lines, .img-intro { animation: move 2s infinite alternate; }
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+@keyframes move {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(7px);
+    }
 }
 
 .gradient {
@@ -46,7 +105,7 @@ h1, h2, h3, h4, h5, .card-title {
 
 .portfolio-block.block-intro {
     text-align: center;
-    height: 80vh;
+    /* height: 80vh; */
 }
 
 .portfolio-block.block-intro .avatar {
@@ -65,11 +124,12 @@ h1, h2, h3, h4, h5, .card-title {
 }
 
 .overlay-intro { 
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../assets/background1.jpg);
+    /* background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../assets/background1.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
+
 
 .portfolio-block.activities .heading{
     margin-bottom: 80px;
@@ -136,7 +196,7 @@ h1, h2, h3, h4, h5, .card-title {
 .card-profile {
     margin-top: 30px;
     text-align: center;
-    min-width: 200px;
+    min-width: 220px;
 }
 
 .card-plain {
@@ -210,6 +270,10 @@ input[type=text], input[type=email] {
     .portfolio-block.team {
         padding-bottom: 20px;
     }
+
+    .img-intro {
+        width: 70%;
+    }
 }
 
 
@@ -234,6 +298,10 @@ input[type=text], input[type=email] {
 
     .portfolio-block.team .team-card:nth-child(1) {
         margin-left: 4% !important;
+    }
+
+    .img-intro {
+        width: 90%;
     }
 }
 
